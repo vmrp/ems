@@ -1,0 +1,90 @@
+[information]
+projectname=application.mpr
+filename=EMS.mrp
+appname=短信图片大师
+appid=830134
+version=1002
+visible=1
+cpu=3
+vendor=默水瓶
+description=制作与众不同的图片短信！
+include=${MRPBUILDER_HOME}..\include\, ${MRPBUILDER_HOME}..\include\plugins,sfw\,sfw\adv,sfw\other, sfw\res\, sfw\common\, sfw\gui\, sfw\controls\, sfw\net\, src\,${MRPBUILDER_HOME}.\plugins\advbar\,${MRPBUILDER_HOME}.\plugins\freecurr
+output_format=lib
+config=mtk,spr
+
+
+
+
+[config_mtk]
+define=SCREEN_SIZE_240320
+output=lib\mtkems.lib
+bmp_mode=normal
+
+[config_spr]
+define=SCREEN_SIZE_240320
+output=lib\sprems.lib
+bmp_mode=spreadtrum
+
+
+[files]
+#common files between 300 - 399
+#file300 = sfw\common\base64_decode.c
+#file301 = sfw\common\base64_encode.c
+#file302 = sfw\common\md5.c
+file303 = sfw\common\string.c
+#file304 = sfw\common\des.c
+file305 = sfw\common\netpack.c
+
+#gui files between 400 - 499
+file400 = sfw\gui\bmp.c
+file401 = sfw\gui\gal.c
+file403 = sfw\gui\i18n.c
+file404 = sfw\gui\platform.c
+file405 = sfw\gui\rect.c
+#file406 = sfw\gui\sound.c
+file407 = sfw\gui\window.c
+
+#control file between 600 - 699
+file600 = sfw\controls\smp.c
+file601 = sfw\controls\smp_button.c
+file602 = sfw\controls\smp_edit.c
+file603 = sfw\controls\smp_list.c
+file604 = sfw\controls\smp_menu.c
+file605 = sfw\controls\smp_menuwnd.c
+file606 = sfw\controls\smp_msgbox.c
+file607 = sfw\controls\smp_scrollbar.c
+file608 = sfw\controls\smp_textinfo.c
+file609 = sfw\controls\smp_toolbar.c
+#file610 = sfw\controls\smp_flashbox.c
+#file611 = sfw\controls\smp_label.c
+#file612 = sfw\controls\plt_menu.c
+#file613 = sfw\controls\plt_text.c
+#file614 = sfw\controls\plt_msgbox.c
+file615 = sfw\controls\smp_progbar.c
+#file616 = sfw\controls\smp_combobox.c
+#file617 = sfw\controls\smp_tabwindow.c
+#file618 = sfw\controls\smp_spin.c
+#file619 = sfw\controls\smp_calendar.c
+#file620 = sfw\controls\smp_datepicker.c
+#file621 = sfw\controls\smp_scrollview.c
+file622 = sfw\controls\smp_titlebar.c
+file623 = sfw\controls\smp_inputbox.c
+#file624 = sfw\controls\plt_open.c
+file625 = sfw\controls\smp_advbar.c
+#file626 = sfw\adv\myAdv.c
+#file627 = sfw\adv\rolldraw.c
+#file628 = sfw\adv\getAdv.c
+file629 = sfw\other\momo.c
+file630 = sfw\other\basic.c
+
+
+#application files between 1000 - 
+file1000 = src\topwnd.c
+file1001 = src\application.c
+file1002 = src\mainwnd.c
+#file1003 = src\momo.c
+file1005 = src\opendlg.c
+file1006 = src\help.c
+file1007 = src\preview.c
+file1008 = src\convert.c
+file1009 = src\startwnd.c
