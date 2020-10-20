@@ -10,7 +10,7 @@ vendor=默水瓶
 description=制作与众不同的图片短信！
 include=${MRPBUILDER_HOME}..\include\, ${MRPBUILDER_HOME}..\include\plugins,sfw\,sfw\adv,sfw\other, sfw\res\, sfw\common\, sfw\gui\, sfw\controls\, sfw\net\, src\,${MRPBUILDER_HOME}.\plugins\advbar\,${MRPBUILDER_HOME}.\plugins\freecurr
 output_format=lib
-config=mtk,spr
+config=mtk
 
 
 
@@ -70,7 +70,7 @@ file615 = sfw\controls\smp_progbar.c
 file622 = sfw\controls\smp_titlebar.c
 file623 = sfw\controls\smp_inputbox.c
 #file624 = sfw\controls\plt_open.c
-file625 = sfw\controls\smp_advbar.c
+#file625 = sfw\controls\smp_advbar.c
 #file626 = sfw\adv\myAdv.c
 #file627 = sfw\adv\rolldraw.c
 #file628 = sfw\adv\getAdv.c

@@ -7,7 +7,7 @@
 */
 #include "window.h"
 #include "smp_advbar.h"
-#include "mrc_advbar.h"
+//#include "mrc_advbar.h"
 #include "smp.h"
 #include "i18n.h"
 #include "gal.h"
@@ -39,7 +39,7 @@ static void AdvLoadCb(int32 result)
     if (MR_SUCCESS == result) 
     {
         _SET_STYLE(hAdvBar,SUCCESS);
-        mrc_advStartDraw();
+//        mrc_advStartDraw();
     }
     else
     {

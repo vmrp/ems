@@ -14,7 +14,7 @@
 #include "mrc_network.h"
 #include "platform.h"
 #include "momo.h"
-#include "mrc_advbar.h"
+//#include "mrc_advbar.h"
 
 
 int32 MRC_EXT_INIT(void)
@@ -52,7 +52,7 @@ int32 mrc_appEvent(int32 code, int32 param0, int32 param1)
 
 int32 mrc_appPause(void)
 {	
-    mrc_advStopDraw();
+//    mrc_advStopDraw();
 	SGL_SuspendDrawing();
 #ifdef ENABLE_SGL_KEYREPEAT		
 	SGL_StopKeyRepeat();

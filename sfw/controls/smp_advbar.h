@@ -2,7 +2,7 @@
 #define _SMP_ADVBAR_H
 
 #include "window.h"
-#include "mrc_advbar.h"
+//#include "mrc_advbar.h"
 
 
 

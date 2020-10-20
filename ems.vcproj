@@ -60,7 +60,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="WS2_32.lib winmm.lib dsound.lib dxguid.lib simlib.lib SIM_mr_helperexbnp.lib vfw32.lib mainext_win32.lib passport_net_win32.lib exttool_win32.lib browser_win32.lib brwcore_win32.lib platreq_win32.lib verdload_win32.lib netpay_win32.lib jpeg_sim.lib simulator.lib data_codec_sim.lib advbar_win32_VS2005.lib skyfont_win32.lib"
+				AdditionalDependencies="WS2_32.lib winmm.lib dsound.lib dxguid.lib simlib.lib SIM_mr_helperexbnp.lib vfw32.lib mainext_win32.lib passport_net_win32.lib exttool_win32.lib browser_win32.lib brwcore_win32.lib platreq_win32.lib verdload_win32.lib netpay_win32.lib jpeg_sim.lib simulator.lib data_codec_sim.lib skyfont_win32.lib"
 				LinkIncremental="2"
 				AdditionalLibraryDirectories="C:\skysdk\Simulator\lib"
 				IgnoreDefaultLibraryNames="LIBCD.lib;LIBC.lib;LIBCMT.lib;LIBCMTD.lib"
@@ -223,10 +223,6 @@
 				>
 				<File
 					RelativePath=".\sfw\controls\smp.c"
-					>
-				</File>
-				<File
-					RelativePath=".\sfw\controls\smp_advbar.c"
 					>
 				</File>
 				<File

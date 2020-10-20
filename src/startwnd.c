@@ -22,7 +22,7 @@
 #include "smp_advbar.h"
 #include "help.h"
 #include "convert.h"
-#include "mrc_freecurrency.h"
+//#include "mrc_freecurrency.h"
 #include "momo.h"
 
 
@@ -52,23 +52,23 @@ static void __chargeResultCB(int32 result){
         HideTopWindow(TOPWND_START, FALSE, FALSE);
         ShowTopWindow(TOPWND_CONVERT, NULL, 0);
     }
-    else SMP_Advbar_Show();
+//    else SMP_Advbar_Show();
 }
 #ifndef WIN32
-static void __prop(int32 data)
-{
-    mrc_freecurrency_prop_pay(1, 10, TEXT_BRIEF, TEXT_DETAIL, __chargeResultCB);
-    mrc_timerDelete(data);
-}
-static void __loadCB(int32 result){
-    if(!_FUNC_IS_SET_ANY(FUNC_CHARGEINIT)) SGL_UnsuspendDrawing();
-    if (MR_SUCCESS == result) {
-        int32 timer;
-        timer=mrc_timerCreate();
-        mrc_timerStart(timer,200,timer,__prop,0);
-        _FUNC_SET_STYLE(FUNC_CHARGEINIT);
-    }
-}
+// static void __prop(int32 data)
+// {
+//     mrc_freecurrency_prop_pay(1, 10, TEXT_BRIEF, TEXT_DETAIL, __chargeResultCB);
+//     mrc_timerDelete(data);
+// }
+// static void __loadCB(int32 result){
+//     if(!_FUNC_IS_SET_ANY(FUNC_CHARGEINIT)) SGL_UnsuspendDrawing();
+//     if (MR_SUCCESS == result) {
+//         int32 timer;
+//         timer=mrc_timerCreate();
+//         mrc_timerStart(timer,200,timer,__prop,0);
+//         _FUNC_SET_STYLE(FUNC_CHARGEINIT);
+//     }
+// }
 #endif // WIN32
 LRESULT START_WndProc(HWND hWnd, UINT Msg, WPARAM wParam, LPARAM lParam)
 {	
@@ -85,8 +85,8 @@ LRESULT START_WndProc(HWND hWnd, UINT Msg, WPARAM wParam, LPARAM lParam)
         y=SCREEN_HEIGHT-x-SMP_ITEM_HEIGHT;
 
 
-        SMP_Advbar_AddToParent(hWnd,0,0,SCREEN_WIDTH,START_ADVBAR,NULL);
-        SMP_Advbar_SetInfo(9000022,FALSE);
+        // SMP_Advbar_AddToParent(hWnd,0,0,SCREEN_WIDTH,START_ADVBAR,NULL);
+        // SMP_Advbar_SetInfo(9000022,FALSE);
 
         hContorl = SGL_CreateWindow(SMP_Button_WndProc,//ÍË³ö
             x, y, w, SMP_ITEM_HEIGHT, 
@@ -120,8 +120,8 @@ LRESULT START_WndProc(HWND hWnd, UINT Msg, WPARAM wParam, LPARAM lParam)
     case WM_DESTROY:
     {
 #ifndef WIN32
-        if(_FUNC_IS_SET_ANY(FUNC_CHARGEINIT))
-            mrc_freecurrency_unload();
+        // if(_FUNC_IS_SET_ANY(FUNC_CHARGEINIT))
+        //     mrc_freecurrency_unload();
 #endif // WIN32
 		break;
     }
@@ -186,19 +186,20 @@ LRESULT START_WndProc(HWND hWnd, UINT Msg, WPARAM wParam, LPARAM lParam)
             case START_MSG_CHARGE:
                 if(code==ID_OK)
                 {
-                    SMP_Advbar_Hide();
+//                    SMP_Advbar_Hide();
 #ifndef WIN32
-                    if(!_FUNC_IS_SET_ANY(FUNC_CHARGEINIT))
-                    {
-                        SGL_SuspendDrawing();
-                        mrc_freecurrency_init(TRUE, FALSE, __loadCB);
-                    }
-                    else
-                        __loadCB(MR_SUCCESS);
+                    // if(!_FUNC_IS_SET_ANY(FUNC_CHARGEINIT))
+                    // {
+                    //     SGL_SuspendDrawing();
+                    //     mrc_freecurrency_init(TRUE, FALSE, __loadCB);
+                    // }
+                    // else
+                    //     __loadCB(MR_SUCCESS);
 #else
-__chargeResultCB(MR_SUCCESS );
+// __chargeResultCB(MR_SUCCESS );
 
 #endif // WIN32
+__chargeResultCB(MR_SUCCESS );
                 }
             }
         }

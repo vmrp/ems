@@ -1,7 +1,7 @@
 #include "smp.h"
 #include "smp_edit.h"
 #include "string.h"
-#include "mrc_advbar.h"
+//#include "mrc_advbar.h"
 
 #define PWDCHAR			0x2a //'*'
 #define SMP_MAXCHARS_PERLINE		80 //最大字符数
@@ -467,7 +467,7 @@ LRESULT SMP_Edit_WndProc(HWND hEdit, UINT Msg, WPARAM wParam, LPARAM lParam)
 		info->title = pData->title;
 		info->buffer = pData->buffer;
 		info->size = pData->size;
-        mrc_advStopDraw();//MP3剪切器增加
+//        mrc_advStopDraw();//MP3剪切器增加
 		break;
 	}
 
